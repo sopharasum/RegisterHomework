@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RegisterHomework</string>
+    <string name="signUpTitle">Sign Up New Account</string>
+    <string name="signUpFirstName">Enter Your First Name</string>
+    <string name="singUpLastName">Enter Your Last Name</string>
+    <string name="singUpEmailAddress">Enter Your Email Address</string>
+    <string name="signUpUsername">Enter Your New Username</string>
+    <string name="signUpPassword">Enter Your New Password</string>
+    <string name="signUpConfirmPassword">Confirm Your New Password</string>
+    <string name="signUpRegister">Register</string>
+    <string name="signUpSuccess">You have sign up successfully</string>
+    <string name="signUpNotMatchPassword">Your password and confirm password not match</string>
+    <string name="signUpEmptyField">Please enter all the required fields</string>
+
+    <string name="homeWelcome">Welcome to My APP</string>
+    <string name="homeName">Name: </string>
+    <string name="homeEmail">Email: </string>
+    <string name="homeUsername">Username: </string>
+    <string name="homePassword">Password: </string>
+</resources>

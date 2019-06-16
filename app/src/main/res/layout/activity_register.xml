@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/signUpTitle"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textAllCaps="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/signUpFirstName"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:id="@+id/firstName"
+        android:inputType="text"
+        android:autofillHints="@string/signUpFirstName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/singUpLastName"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:id="@+id/lastName"
+        android:inputType="text"
+        android:autofillHints="@string/singUpLastName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/singUpEmailAddress"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:id="@+id/emailAddress"
+        android:inputType="textEmailAddress"
+        android:autofillHints="@string/singUpEmailAddress"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/signUpUsername"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:id="@+id/username"
+        android:inputType="text"
+        android:autofillHints="@string/signUpUsername"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/signUpPassword"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:autofillHints="@string/signUpPassword"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/signUpConfirmPassword"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:id="@+id/confirmPassword"
+        android:inputType="textPassword"
+        android:autofillHints="@string/signUpConfirmPassword"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signUpRegister"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:onClick="onRegister"/>
+
+
+</LinearLayout>
