@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
             String username = intent.getStringExtra("username");
             String password = intent.getStringExtra("password");
 
-            mTvFirstName.setText("Name: "+firstName+" "+lastName);
-            mTvEmail.setText("Email: "+email);
-            mTvUsername.setText("Username: "+username);
-            mTvPassword.setText("Password: "+password);
+            mTvFirstName.setText(firstName+" "+lastName);
+            mTvEmail.setText(email);
+            mTvUsername.setText(username);
+            mTvPassword.setText(password);
         }
     }
 }

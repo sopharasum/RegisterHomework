@@ -15,8 +15,8 @@
 
 
     <string name="homeWelcome">Welcome to My APP</string>
-    <string name="homeName">Name: </string>
-    <string name="homeEmail">Email: </string>
-    <string name="homeUsername">Username: </string>
-    <string name="homePassword">Password: </string>
+    <string name="homeName">Name </string>
+    <string name="homeEmail">Email </string>
+    <string name="homeUsername">Username </string>
+    <string name="homePassword">Password </string>
 </resources>

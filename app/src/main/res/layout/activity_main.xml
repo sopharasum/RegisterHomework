@@ -1,57 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/homeWelcome"
-        android:textSize="30sp"
+        android:gravity="center"
         android:layout_margin="20dp"
-        android:layout_gravity="center"
+        android:fontFamily="@font/nexabold"
+        android:text="@string/homeWelcome"
         android:textAllCaps="true"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:id="@+id/homeTitle"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_account_circle"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:layout_below="@+id/homeTitle"
+        android:id="@+id/homeProfileImg"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/homeName"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/nexabold"
+        android:layout_below="@+id/homeProfileImg"
+        android:id="@+id/tvTagName"
+        android:textColor="#000"/>
+
+    <TextView
         android:id="@+id/tvFirstName"
-        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:fontFamily="@font/nexalight"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_below="@+id/homeProfileImg"
+        android:text="{firstName+lastName}"
+        android:layout_toRightOf="@+id/tvTagName"
+        android:gravity="right"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homeEmail"
+        android:textSize="18sp"
+        android:id="@+id/tvTagEmail"
+        android:layout_below="@+id/tvTagName"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/nexabold"
         android:textColor="#000"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/tvEmail"
-        android:textSize="18sp"
-        android:layout_margin="16dp"
-        android:textColor="#000"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvUsername"
-        android:textSize="18sp"
         android:layout_margin="16dp"
-        android:textColor="#000"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvPassword"
+        android:fontFamily="@font/nexalight"
+        android:textColor="#000"
         android:textSize="18sp"
-        android:layout_margin="16dp"
-        android:textColor="#000"/>
+        android:layout_below="@+id/tvFirstName"
+        android:text="{emailAddress}"
+        android:layout_toRightOf="@+id/tvTagEmail"
+        android:gravity="right"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTageUsername"
+        android:text="@string/homeUsername"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:fontFamily="@font/nexabold"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/tvTagEmail"/>
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/nexalight"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_below="@+id/tvEmail"
+        android:text="{username}"
+        android:layout_toRightOf="@+id/tvTageUsername"
+        android:gravity="right"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homePassword"
+        android:id="@+id/tvTagPassword"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/nexabold"
+        android:layout_below="@+id/tvTageUsername"/>
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/nexalight"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_below="@+id/tvUsername"
+        android:text="{password}"
+        android:layout_toRightOf="@+id/tvTagPassword"
+        android:gravity="right"/>
+
+</RelativeLayout>
