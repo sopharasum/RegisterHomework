@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.registerhomework.model.Account;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView mTvFirstName, mTvEmail, mTvUsername, mTvPassword;
@@ -22,7 +24,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if(intent != null)
         {
-            String firstName = intent.getStringExtra("firstName");
+            Account account = intent.getParcelableExtra("data");
+            mTvFirstName.setText(account.getFirstName()+" "+account.getLastName());
+            mTvEmail.setText(account.getEmailAddress());
+            mTvUsername.setText(account.getUsername());
+            mTvPassword.setText(account.getPassword());
+
+
+            /*String firstName = intent.getStringExtra("firstName");
             String lastName = intent.getStringExtra("lastName");
             String email = intent.getStringExtra("email");
             String username = intent.getStringExtra("username");
@@ -31,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             mTvFirstName.setText(firstName+" "+lastName);
             mTvEmail.setText(email);
             mTvUsername.setText(username);
-            mTvPassword.setText(password);
+            mTvPassword.setText(password);*/
         }
     }
 }

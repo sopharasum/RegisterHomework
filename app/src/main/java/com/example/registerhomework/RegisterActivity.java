@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.registerhomework.model.Account;
+
 public class RegisterActivity extends AppCompatActivity {
 
     EditText mEditTextFirstName, mEditTextLastName, mEditTextEmail, mEditTextUsername, mEditTextPassword, mEditTextConfirmPassword;
@@ -42,11 +44,20 @@ public class RegisterActivity extends AppCompatActivity {
             if(password.equals(confirmPassword))
             {
                 Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("firstName", firstName);
+                Account account = new Account(firstName, lastName, email, username, password);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data", account);
+                intent.putExtras(bundle);
+
+
+
+
+
+                /*intent.putExtra("firstName", firstName);
                 intent.putExtra("lastName", lastName);
                 intent.putExtra("email", email);
                 intent.putExtra("username", username);
-                intent.putExtra("password", password);
+                intent.putExtra("password", password);*/
                 startActivity(intent);
                 Toast.makeText(this, R.string.signUpSuccess, Toast.LENGTH_SHORT).show();
             }
